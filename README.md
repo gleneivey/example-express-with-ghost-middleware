@@ -8,16 +8,19 @@ To use:
  * Have `node`, `npm`, and `grunt` installed
  * Clone this repo onto your local system
  * In repo, `npm install` to load dependencies
- * Do some manual setup of Ghost.  Only necessary while we're installing from a git URL and not a package.
+ * Do some manual setup of Ghost.  (Only necessary because we're temporarily installing from a git URL and not a package.)
     * `cd node_modules/ghost`
     * `npm install`
     * `grunt init`
     * `cd ../..`
  * `node index.js` to start the example server locally
  * navigate a browser to `http://localhost:2360/` and see a page served by the example Express app
- * navigate to `http://localhost:2360/` and see the embedded Ghost's home page
- * navigate to `http://localhost:2360/not-a-page` and see a 404 page served by the example Express app
+ * navigate to `http://localhost:2360/blog` and see the embedded Ghost's home page
 
-The configuration can be changed to have Ghost serve the 404 page by changing the value of
-`generate404s:` from `false` to `true` in `config_ghost.js`.  The default if the key is not
-included in Ghost's configuration is for Ghost to serve 404s.
+The configuration for whether Ghost serves 404 pages for bad URLs under `/blog` can be changed using the
+`generate404s:` key in Ghost's configuration file.  In this example app, that's `config_ghost.js`.  The
+default if the key is not included in Ghost's configuration is for Ghost to serve 404s, same as `generate404s`
+equal to `true`.
+
+As this app is "just and example," the scheme, host, and port at which the server runs are hard-coded.
+If you wish to change them, you'll need to edit _both_ `index.js` and `config_ghost.js`.
