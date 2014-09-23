@@ -7,7 +7,7 @@
     "url" : "http://github.com/gleneivey/example-express-with-ghost-middleware.git"
   },
   "dependencies": {
-    "ghost": "git://github.com/gleneivey/Ghost.git#ghost-as-middleware",
+    "ghost": "git://github.com/gleneivey/Ghost.git#use_as_express_middleware",
     "express": "3.4.6",
     "when": "3.2.3"
   }
