@@ -22,5 +22,5 @@ The configuration for whether Ghost serves 404 pages for bad URLs under `/blog` 
 default if the key is not included in Ghost's configuration is for Ghost to serve 404s, same as `generate404s`
 equal to `true`.
 
-As this app is "just and example," the scheme, host, and port at which the server runs are hard-coded.
-If you wish to change them, you'll need to edit _both_ `index.js` and `config_ghost.js`.
+As this app is "just an example," the scheme, host, and port at which the server runs are hard-coded.
+If you wish to change them, you'll need to edit `index.js`.
