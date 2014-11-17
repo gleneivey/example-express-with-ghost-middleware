@@ -1,13 +1,14 @@
 {
   "name": "example-express-with-ghost-middleware",
   "description": "Minimal Express server, intended solely as an example of using Ghost as a middleware component in a larger web app.",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "license": "MIT",
   "repository"  : {
     "type": "git",
     "url" : "http://github.com/gleneivey/example-express-with-ghost-middleware.git"
   },
   "dependencies": {
     "ghost": "git://github.com/gleneivey/Ghost.git#use_as_express_middleware",
-    "express": "4.9.2"
+    "express": "^4.10.2"
   }
 }

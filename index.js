@@ -3,7 +3,7 @@ if (!process.env.NODE_ENV) {
 }
 
 var express = require('express'),
-    ghost = require('ghost/core/server/middleware'),
+    ghost = require('ghost/as-middleware'),
     path = require('path');
 
 var ghostConfig = {
@@ -37,9 +37,10 @@ function serveHomePage(req, res){
   );
 }
 
-var app = express();
+var app = express(),
+    ghost = ghost(ghostConfig);
 app.get('/', serveHomePage);
-app.use('/blog', ghost(ghostConfig));
+app.use('/blog', ghost);
 app.use(function(req, res){
   res.status(404).send("Sorry, can't find that.");
 });
